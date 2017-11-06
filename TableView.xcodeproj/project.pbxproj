@@ -15,6 +15,8 @@
 		699030E71FAFEF1100FC23E7 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699030E61FAFEF1100FC23E7 /* CustomTableViewCell.swift */; };
 		699030E91FAFEF8300FC23E7 /* CutomCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699030E81FAFEF8300FC23E7 /* CutomCellModel.swift */; };
 		699030EB1FAFF91000FC23E7 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699030EA1FAFF91000FC23E7 /* SecondTableViewCell.swift */; };
+		699030ED1FB0006800FC23E7 /* ThirdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699030EC1FB0006800FC23E7 /* ThirdTableViewCell.swift */; };
+		699030EF1FB000F800FC23E7 /* ThirdCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699030EE1FB000F800FC23E7 /* ThirdCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		699030E61FAFEF1100FC23E7 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		699030E81FAFEF8300FC23E7 /* CutomCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutomCellModel.swift; sourceTree = "<group>"; };
 		699030EA1FAFF91000FC23E7 /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
+		699030EC1FB0006800FC23E7 /* ThirdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTableViewCell.swift; sourceTree = "<group>"; };
+		699030EE1FB000F800FC23E7 /* ThirdCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6971BC371FB00B5300B2F6B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				699030E81FAFEF8300FC23E7 /* CutomCellModel.swift */,
+				699030EE1FB000F800FC23E7 /* ThirdCellModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6971BC381FB00B5C00B2F6B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				699030E61FAFEF1100FC23E7 /* CustomTableViewCell.swift */,
+				699030EA1FAFF91000FC23E7 /* SecondTableViewCell.swift */,
+				699030EC1FB0006800FC23E7 /* ThirdTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6971BC391FB00B7500B2F6B7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				699030D61FAFEC7B00FC23E7 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		699030C81FAFEC7B00FC23E7 = {
 			isa = PBXGroup;
 			children = (
@@ -61,10 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				699030D41FAFEC7B00FC23E7 /* AppDelegate.swift */,
-				699030D61FAFEC7B00FC23E7 /* ViewController.swift */,
-				699030E61FAFEF1100FC23E7 /* CustomTableViewCell.swift */,
-				699030EA1FAFF91000FC23E7 /* SecondTableViewCell.swift */,
-				699030E81FAFEF8300FC23E7 /* CutomCellModel.swift */,
+				6971BC391FB00B7500B2F6B7 /* Controllers */,
+				6971BC381FB00B5C00B2F6B7 /* Views */,
+				6971BC371FB00B5300B2F6B7 /* Models */,
 				699030D81FAFEC7B00FC23E7 /* Main.storyboard */,
 				699030DB1FAFEC7B00FC23E7 /* Assets.xcassets */,
 				699030DD1FAFEC7B00FC23E7 /* LaunchScreen.storyboard */,
@@ -148,8 +178,10 @@
 				699030E91FAFEF8300FC23E7 /* CutomCellModel.swift in Sources */,
 				699030EB1FAFF91000FC23E7 /* SecondTableViewCell.swift in Sources */,
 				699030E71FAFEF1100FC23E7 /* CustomTableViewCell.swift in Sources */,
+				699030EF1FB000F800FC23E7 /* ThirdCellModel.swift in Sources */,
 				699030D71FAFEC7B00FC23E7 /* ViewController.swift in Sources */,
 				699030D51FAFEC7B00FC23E7 /* AppDelegate.swift in Sources */,
+				699030ED1FB0006800FC23E7 /* ThirdTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
