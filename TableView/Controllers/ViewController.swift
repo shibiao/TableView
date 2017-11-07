@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var data: [CustomCellModel]!
     var thirdData: [ThirdCellModel]!
-    var isAdd: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         data = [CustomCellModel]()
@@ -24,22 +23,20 @@ class ViewController: UIViewController {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        
     }
     @IBAction func add(_ sender: Any) {
-        isAdd = true
         DispatchQueue.global().async {
             let model = ThirdCellModel(iconName: "1", title: "ha'ha'ha'h'ha'ha'h'ha")
             self.thirdData.append(model)
             DispatchQueue.main.async {
                 let indexPath = IndexPath(row: self.data.count + self.thirdData.count - 1, section: 0)
+                self.tableView.beginUpdates()
                 self.tableView.insertRows(at: [indexPath], with: .bottom)
-                self.tableView.reloadRows(at: [indexPath], with: .automatic)
+                self.tableView.endUpdates()
                 self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
             }
             
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,9 +63,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
             cell.title.text = String(indexPath.row.description)
             return cell
         }
-        self.isAdd = false
         let cell = tableView.dequeueReusableCell(withIdentifier: "reusecell3", for: indexPath) as! ThirdTableViewCell
-        print(indexPath.row - data.count)
         cell.data = thirdData[indexPath.row - data.count]
         return cell
         
